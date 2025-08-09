@@ -1,4 +1,4 @@
-import 'package:ecomerce/ui/root/root_screen.dart';
+import 'package:ecomerce/ui/screens/root/root_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

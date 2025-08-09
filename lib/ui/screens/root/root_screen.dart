@@ -1,3 +1,7 @@
+import 'package:ecomerce/core/constants/colors.dart';
+import 'package:ecomerce/core/models/product.dart';
+import 'package:ecomerce/ui/screens/cart/cart_screen.dart';
+import 'package:ecomerce/ui/screens/home/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,14 +22,15 @@ class RootScreen extends StatelessWidget {
               onPageChanged: model.onPageChanged,
               physics: const NeverScrollableScrollPhysics(),
               children: const [
-                Center(child: Text('Home')),
+                HomeScreen(),
                 Center(child: Text('Search')),
                 Center(child: Text('Saved')),
-                Center(child: Text('Cart')),
+                CartScreen(),
                 Center(child: Text('Account')),
               ],
             ),
             bottomNavigationBar: BottomNavigationBar(
+              backgroundColor: Colors.white,
               currentIndex: model.selectedIndex,
               onTap: model.onItemTapped,
               selectedItemColor: Colors.black,
